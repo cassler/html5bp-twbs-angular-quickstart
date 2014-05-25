@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="myApp">
+<html class="no-js" lang="en" ng-app="ngApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,28 +23,52 @@
 <!-- Add your site or application content here -->
 
 <!-- application information, remove this for production -->
-<div class="jumbotron" ng-controller="appController">
-    <h1>{{app.title}}</h1>
-    <p>{{app.description}}</p>
-    <p>
-        <a href="{{twbsURL}}"><span class="btn btn-default btn-sm">Bootstrap {{app.twbsVersion}}</span></a>
-        <a href="{{angURL}}"><span class="btn btn-default btn-sm">Angular {{app.angVersion}}</span></a>
-        <a href="{{jqURL}}"><span class="btn btn-default btn-sm">jQuery {{app.jqVersion}}</span></a>
+<header role="intro" class="jumbotron" ng-controller="appController">
+    <h2>{{app.title}}</h2>
+    <p>{{app.description}}<br />
+    <small>Built and maintained by {{author.name}} of <a href="{{author.url}}">{{author.company}}</a></small></p>
+    <h3>Proudly Powered by</h3>
+    <p class="btn-group">
+        <button type="button" href="{{twbsURL}}" class="btn btn-danger btn-sm">Bootstrap {{app.twbsVersion}}</button>
+        <button type="button" href="{{angURL}}" class="btn btn-danger btn-sm">Angular {{app.angVersion}}</button>
+        <button type="button" href="{{jqURL}}" class="btn btn-danger btn-sm">jQuery {{app.jqVersion}}</button>
     </p>
-    <p><a class="btn btn-primary" href="{{app.url}}">Find us on GitHub</a></p>
+    <br />
+    <p>
+        <button type="button" class="btn btn-warning btn-lg" href="{{app.url}}">View on GitHub</button> 
+        <button type="button" class="btn btn-warning btn-lg" href="{{app.downloadURL}}">Download</button>
+    </p>
+    
+    <h3>Milestone Progress on {{app.version}}</h3>
+    <div class="container">
+        <div class="col-sm-10 col-sm-offset-1">
+        <div class="progress progress-striped">
+
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{app.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{app.progress}}%;">
+            {{app.progress}}% Complete
+        </div>
+        </div>
+    </div>
+
 </div>
+</header>
+
+
+
+
+<div class="container">
 
 <!-- sample controller -->
-<div ng-controller="appController">
+<!-- <div ng-controller="appController">
     <input type="text" ng-model="author.name">
     <h2>Welcome {{author.name}}</h2>
     <h4>{{ author.title + ', ' + author.company }}</h4> 
 </div>
-
-
+ -->
+</div>
 
 <footer role="scripts">
-    <!-- <script src="js/app.js"></script> -->
+    <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/lib/jquery-1.11.0.min.js"></script>
     <script src="js/lib/modernizr-2.8.0.min.js"></script>
