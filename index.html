@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app>
+<html class="no-js" lang="en" ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,21 +15,37 @@
 
 </head>
 <body>
-    <!--[if lt IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!-- Add your site or application content here -->
+<!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+<!-- Add your site or application content here -->
 
-    <div ng-controller="MyController">
-        <input type="text" ng-model="author.name">
-        <h2>Welcome {{author.name}}</h2>
-        <h4>{{ author.title + ', ' + author.company }}</h4> 
-    </div>
+<!-- application information, remove this for production -->
+<div class="jumbotron" ng-controller="appController">
+    <h1>{{app.title}}</h1>
+    <p>{{app.description}}</p>
+    <p>
+        <a href="{{twbsURL}}"><span class="btn btn-default btn-sm">Bootstrap {{app.twbsVersion}}</span></a>
+        <a href="{{angURL}}"><span class="btn btn-default btn-sm">Angular {{app.angVersion}}</span></a>
+        <a href="{{jqURL}}"><span class="btn btn-default btn-sm">jQuery {{app.jqVersion}}</span></a>
+    </p>
+    <p><a class="btn btn-primary" href="{{app.url}}">Find us on GitHub</a></p>
+</div>
+
+<!-- sample controller -->
+<div ng-controller="appController">
+    <input type="text" ng-model="author.name">
+    <h2>Welcome {{author.name}}</h2>
+    <h4>{{ author.title + ', ' + author.company }}</h4> 
+</div>
+
+
+
 <footer role="scripts">
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/controllers.js"></script>
     <script src="js/lib/jquery-1.11.0.min.js"></script>
     <script src="js/lib/modernizr-2.8.0.min.js"></script>
     <script src="js/lib/bootstrap-3.1.1.min.js"></script>

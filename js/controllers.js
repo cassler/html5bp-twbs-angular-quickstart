@@ -1,4 +1,7 @@
-function appController($scope) {
+var myNameSpace = angular.module('myApp', []);
+
+myNameSpace.controller('appController', function appController($scope) {
+
 	$scope.app = {
 		'title'			: 'Angular Bootstrap Quickstart',
 		'description'	: 'A bare bones starting point for using Twitter Bootstrap and Angular JS for rapid application development',
@@ -15,6 +18,8 @@ function appController($scope) {
 		'name'	: 'Darin Cassler',
 		'title'	: 'Web Developer',
 		'company': 'cassler.net',
-
 	}
-}
+});
+
+
+
