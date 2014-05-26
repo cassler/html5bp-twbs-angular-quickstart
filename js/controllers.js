@@ -1,8 +1,8 @@
 
 // LEARNR - The future of
-var learnr = angular.module('learnr', []);
+var dataControllers = angular.module('dataControllers', []);
 
-learnr.controller('appController', function appController($scope, $http) {
+dataControllers.controller('DataController', function DataController($scope, $http) {
 
 	$scope.app = {
 		'title'			: 'Angular Bootstrap Quickstart',
@@ -39,7 +39,6 @@ learnr.controller('appController', function appController($scope, $http) {
 		'company': 'Cassler Labs',
 		'url'		: 'http://cassler.net',
 	}
-
 	
 
 });

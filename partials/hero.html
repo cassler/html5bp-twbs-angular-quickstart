@@ -1,7 +1,5 @@
-<section class="intro">
-
 <!-- application information, remove this for production -->
-<header role="intro" class="jumbotron" data-ng-controller="appController">
+<header role="intro" class="jumbotron" data-ng-controller="DataController">
     <h1>{{app.title}}</h1>
     <p>{{app.description}}</p>
     <p>
@@ -27,4 +25,89 @@
     </div>
 </header><!-- end intro -->
 
-</section>
+<div class="container" data-ng-controller="DataController">
+
+    <div class="row" id="cdnjs-mirror">
+        <div class="col-sm-12">
+            <h3 class="page-header">Search the CDN JS Mirror</h3>
+            <p>Go ahead, try it. We're looking through entire objects, so if your query isn't in the object it vanishes.</p>
+            <div class="input-group">
+            
+            <select ng-model="order">
+                <option value="name">Name</option>
+                <option value="version">Version</option>
+                <option value="type">Type</option>
+            </select>
+            </div>
+            
+            
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Filter</button>
+              </span>
+              <input type="text" class="form-control"  ng-model="query">
+            </div><!-- /input-group -->
+        <table class="table table-condensed">
+            <thead>
+                <th>Library</th>
+                <th>Type</th>
+                <th>Version</th>
+                <th>CDN url</th>
+                <th>Docs</th>
+                <th>Download</th>
+            </thead>
+            <tr ng-repeat="file in jslist | filter:query |orderBy:order:direction">
+                <td><b>{{file.name}}</b></td>
+                <td><span class="label label-info">{{file.type | uppercase}}</span></td>
+                <td><span class="label label-default">{{file.version}}</span></td>
+                <td><a href="{{file.url}}">{{file.url}}</a></td>
+                <td><a class="btn btn-xs btn-primary" href="{{file.url}}">{{file.name}}</a></td>
+                <td><a class="btn btn-xs btn-success" href="{{file.url}}">Download</a></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h3 class="page-header">Proudly Powered by</h3>
+        </div>
+
+        <div class="col-sm-4" ng-repeat="item in libs">
+            <div class="panel panel-info">
+                <div class="panel-heading">{{item.name}} - v{{item.version}}</div>
+                <div class="panel-body">
+                    <p>{{item.html}}</p>
+                    <p><a href="{{item.url}}">{{item.url}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end main row -->
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-header">Lovingly engineered by</h3>
+        </div>
+        <div class="col-sm-4" ng-repeat="item in users">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4>{{item.name}}<br /><small>{{item.location}}</small></h4></div>
+                <div class="panel-body">
+                    <p>{{item.content}}</p>
+                    <p><a href="{{item.url}}">{{item.url}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end main row -->
+
+
+
+    <div class="row" role="colophon">
+        <div class="col-xs-12">
+            <p><small>Built and maintained by {{author.name}} of <a href="{{author.url}}">{{author.company}}</a></small></p>
+        </div>
+    </div><!-- end colophon row -->
+
+   
+   
+</div><!-- end container -->
