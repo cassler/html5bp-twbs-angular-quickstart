@@ -1,0 +1,19 @@
+[
+	{
+		"name"		:	"Darin Cassler",
+		"location"	:	"Burlington, Vermont",
+		"url"			:	"http://cassler.net",
+		"content"	:	"The most popular front-end framework for developing responsive, mobile first projects on the web."
+	},
+	{
+		"name"		:	"Emma Cassler",
+		"location"	: 	"Imagination Land",
+		"url"			: 	"http://disney.com",
+		"content"	: 	"jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API"},
+	{
+		"name"		: 	"Jeff Bridges",
+		"location"	: 	"aka the Dude",
+		"url"			: 	"http://angularjs.org",
+		"content"	: 	"AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop."
+	}
+]

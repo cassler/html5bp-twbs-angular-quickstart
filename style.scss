@@ -7,14 +7,22 @@ Up and running with Bootstrap and Angular
 header[role="intro"] {
 	text-align:center;
 	color:#fff;
-/* Rectangle 1: */
-/* Rectangle 1: */
-background-image: -o-linear-gradient(107deg, #52389A 0%, #B989BD 98%);
-background-image: -moz-linear-gradient(107deg, #52389A 0%, #B989BD 98%);
-background-image: -ms-linear-gradient(107deg, #52389A 0%, #B989BD 98%);
-background-image: linear-gradient(17deg, #52389A 0%, #B989BD 98%);
+	background-image: -o-linear-gradient(119deg, #95ACB0 4%, #B3977B 94%);
+	background-image: -moz-linear-gradient(119deg, #95ACB0 4%, #B3977B 94%);
+	background-image: -ms-linear-gradient(119deg, #95ACB0 4%, #B3977B 94%);
+	background-image: linear-gradient(29deg, #95ACB0 4%, #B3977B 94%);
 
-a, a:visited, a:hover {color:$brand-warning}
+	text-shadow:-1px -1px 1px #777;
+
+	a, a:visited, a:hover {color:$brand-warning}
 
 
+}
+
+.btn-css {
+	@extend .btn-info;
+}
+
+.btn-js {
+	@extend .btn-warning;
 }

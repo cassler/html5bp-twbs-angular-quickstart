@@ -1,0 +1,19 @@
+[
+	{
+		"title"		:	"Bootstrap",
+		"date"	:	"3.1.1",
+		"link"			:	"http://getbootstrap.com",
+		"content"		:	"The most popular  here is a test of \"quotes\" inline. and what about a <br \/>front-end framework for developing responsive, mobile first projects on the web."
+	},
+	{
+		"title"		:	"jQuery",
+		"date"	: 	"1.11.0",
+		"link"			: 	"http://jquery.com",
+		"content"		: 	"jQuery is a fast, small, and feature-rich JavaScript library. It makes things like content document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API"},
+	{
+		"title"		: 	"AngularJS",
+		"date"	: 	"1.2.16",
+		"link"			: 	"http://angularjs.org",
+		"content"		: 	"AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop."
+	}
+]
